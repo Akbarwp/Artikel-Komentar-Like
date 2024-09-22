@@ -6,7 +6,7 @@ Komentar & Like Article is a website that provides interactive features for user
 
 - **Laravel 9**
 - **MySQL Database**
-- **Liverire**
+- **Livewire**
 - **Laravel UI**
 
 ## Features
