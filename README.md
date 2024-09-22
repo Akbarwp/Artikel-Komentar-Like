@@ -1,66 +1,87 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Komentar & Like Article
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Komentar & Like Article is a website that provides interactive features for users to comment and reply to comments on articles in real-time. Additionally, users can "like" other comments. Built using Laravel and Livewire, the website offers a responsive and dynamic experience for interacting with article content.
 
-## About Laravel
+## Tech Stack
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- **Laravel 9**
+- **MySQL Database**
+- **Liverire**
+- **Laravel UI**
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Features
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Main features available in this application:
+  - comments an article
+  - Replies comment
+  - Likes comment
 
-## Learning Laravel
+## Installation
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Follow the steps below to clone and run the project in your local environment:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+1. Clone repository:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+    ```bash
+    git clone https://github.com/Akbarwp/Artikel-Komentar-Like.git
+    ```
 
-## Laravel Sponsors
+2. Install dependencies use Composer and NPM:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+    ```bash
+    composer install
+    npm install
+    ```
 
-### Premium Partners
+3. Copy file `.env.example` to `.env`:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+    ```bash
+    cp .env.example .env
+    ```
 
-## Contributing
+4. Generate application key:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+    ```bash
+    php artisan key:generate
+    ```
 
-## Code of Conduct
+5. Setup database in the `.env` file:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+    ```plaintext
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=komentar_like
+    DB_USERNAME=root
+    DB_PASSWORD=
+    ```
 
-## Security Vulnerabilities
+6. Run migration database:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+    ```bash
+    php artisan migrate
+    ```
 
-## License
+7. Run website:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+    ```bash
+    npm run dev
+    php artisan serve
+    ```
+
+## Screenshot
+
+- ### **Article page**
+
+<img src="https://github.com/user-attachments/assets/229ea01d-7066-4695-9968-b1bc1c038ed7" alt="Halaman Artikel" width="" />
+<br><br>
+
+- ### **Article Detail page**
+
+<img src="https://github.com/user-attachments/assets/01fe9ee9-0710-436a-a7c0-7ea73dbc832e" alt="Halaman Detail Artikel" width="" />
+<br><br>
+
+- ### **Feature**
+
+<img src="https://github.com/user-attachments/assets/bd04f5e0-fdf1-4c91-93c3-582c4a9b66c3" alt="Fitur Komentar Replay Like" width="" />
+<br><br>
